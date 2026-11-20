@@ -649,41 +649,41 @@ export default function AdminDashboard() {
         <main className="flex-1 p-8 space-y-8 max-w-[1440px] w-full mx-auto">
           {/* Dashboard Overview */}
           {activeTab === 'dashboard' && (
-            <div className="space-y-8">
+            <div className="space-y-6 max-w-3xl">
               <div>
-                <h1 className="text-xl font-extrabold text-slate-900 tracking-tight">Overview Dashboard</h1>
+                <h1 className="text-xl font-bold text-slate-900 tracking-tight">Overview Dashboard</h1>
                 <p className="text-xs text-slate-500 mt-0.5">Key metrics and platform administration statistics</p>
               </div>
 
-              <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="bg-white border border-slate-200/80 rounded-xl px-5 py-4 shadow-sm hover:shadow transition-shadow">
                   <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">Total Users</div>
-                  <div className="text-2xl font-extrabold text-slate-900">{stats.totalUsers}</div>
+                  <div className="text-2xl font-bold text-slate-900">{stats.totalUsers}</div>
                 </div>
 
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div className="bg-white border border-slate-200/80 rounded-xl px-5 py-4 shadow-sm hover:shadow transition-shadow">
                   <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">Total Stores</div>
-                  <div className="text-2xl font-extrabold text-slate-900">{stats.totalStores}</div>
+                  <div className="text-2xl font-bold text-slate-900">{stats.totalStores}</div>
                 </div>
 
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div className="bg-white border border-slate-200/80 rounded-xl px-5 py-4 shadow-sm hover:shadow transition-shadow">
                   <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">Total Submitted Ratings</div>
-                  <div className="text-2xl font-extrabold text-slate-900">{stats.totalRatings}</div>
+                  <div className="text-2xl font-bold text-slate-900">{stats.totalRatings}</div>
                 </div>
               </section>
 
-              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-                <h3 className="text-sm font-bold text-slate-900 mb-4 select-none">Quick Actions</h3>
-                <div className="flex flex-wrap gap-4">
+              <div className="bg-white border border-slate-200/80 rounded-xl p-5 shadow-sm">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 select-none">Quick Actions</h3>
+                <div className="flex flex-wrap gap-3">
                   <button
                     onClick={() => setUserModalOpen(true)}
-                    className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl px-5 py-3 font-bold transition shadow-sm text-xs"
+                    className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg px-4 py-2 font-semibold transition shadow-sm text-xs"
                   >
-                    <span>+ Add User (Admin, User, Owner)</span>
+                    <span>+ Add User</span>
                   </button>
                   <button
                     onClick={() => setStoreModalOpen(true)}
-                    className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl px-5 py-3 font-bold transition shadow-sm text-xs"
+                    className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg px-4 py-2 font-semibold transition shadow-sm text-xs"
                   >
                     <span>+ Add Store</span>
                   </button>

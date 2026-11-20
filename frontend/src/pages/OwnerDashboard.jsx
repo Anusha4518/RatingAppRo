@@ -303,32 +303,32 @@ export default function OwnerDashboard() {
         <main className="flex-1 p-8 space-y-8 max-w-[1440px] w-full mx-auto">
           {/* Dashboard Stats Tab */}
           {activeTab === 'dashboard' && (
-            <div className="space-y-8">
+            <div className="space-y-6 max-w-3xl">
               <div>
-                <h1 className="text-xl font-extrabold text-slate-900 tracking-tight">Store Performance Overview</h1>
+                <h1 className="text-xl font-bold text-slate-900 tracking-tight">Store Performance Overview</h1>
                 <p className="text-xs text-slate-500 mt-0.5">Average customer satisfaction metrics and rating analytics</p>
               </div>
 
-              <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="bg-white border border-slate-200/80 rounded-xl px-5 py-4 shadow-sm hover:shadow transition-shadow">
                   <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">Registered Store</div>
-                  <div className="text-xl font-extrabold text-slate-900 truncate max-w-[200px]">
+                  <div className="text-lg font-bold text-slate-900 truncate">
                     {data.storeName || 'Not Assigned'}
                   </div>
                 </div>
 
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div className="bg-white border border-slate-200/80 rounded-xl px-5 py-4 shadow-sm hover:shadow transition-shadow">
                   <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">Average Store Rating</div>
-                  <div className="text-3xl font-extrabold text-amber-500 flex items-center gap-1.5">
+                  <div className="text-2xl font-bold text-amber-500 flex items-center gap-1">
                     <span>★</span>
                     <span>{data.averageRating > 0 ? data.averageRating.toFixed(2) : '0.00'}</span>
                     <span className="text-xs font-normal text-slate-400">/ 5</span>
                   </div>
                 </div>
 
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div className="bg-white border border-slate-200/80 rounded-xl px-5 py-4 shadow-sm hover:shadow transition-shadow">
                   <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mb-1">Total Ratings Received</div>
-                  <div className="text-3xl font-extrabold text-slate-900">{data.ratings.length}</div>
+                  <div className="text-2xl font-bold text-slate-900">{data.ratings.length}</div>
                 </div>
               </section>
 

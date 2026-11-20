@@ -303,31 +303,32 @@ export default function OwnerDashboard() {
         <main className="flex-1 p-8 space-y-8 max-w-[1440px] w-full mx-auto">
           {/* Dashboard Stats Tab */}
           {activeTab === 'dashboard' && (
-            <div className="space-y-5 max-w-xl">
+            <div className="space-y-6 max-w-2xl">
               <div>
-                <h1 className="text-lg font-bold text-slate-900 tracking-tight">Store Performance Overview</h1>
+                <h1 className="text-xl font-bold text-slate-900 tracking-tight">Store Performance Overview</h1>
                 <p className="text-xs text-slate-500 mt-0.5">Average customer satisfaction metrics and rating analytics</p>
               </div>
 
-              <section className="grid grid-cols-3 gap-3">
-                <div className="bg-white border border-slate-200/80 rounded-lg px-4 py-3 shadow-sm hover:border-slate-300 transition-colors">
-                  <div className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">Registered Store</div>
-                  <div className="text-sm font-bold text-slate-900 mt-0.5 truncate">
+              <section className="grid grid-cols-3 gap-4">
+                <div className="bg-white border border-slate-200/80 rounded-xl p-5 shadow-sm hover:border-slate-300 transition-colors">
+                  <div className="text-xs text-slate-500 uppercase font-medium tracking-wider mb-1">Registered Store</div>
+                  <div className="text-base font-bold text-slate-900 truncate">
                     {data.storeName || 'Not Assigned'}
                   </div>
                 </div>
 
-                <div className="bg-white border border-slate-200/80 rounded-lg px-4 py-3 shadow-sm hover:border-slate-300 transition-colors">
-                  <div className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">Avg Rating</div>
-                  <div className="text-lg font-bold text-amber-500 mt-0.5 flex items-center gap-1">
+                <div className="bg-white border border-slate-200/80 rounded-xl p-5 shadow-sm hover:border-slate-300 transition-colors">
+                  <div className="text-xs text-slate-500 uppercase font-medium tracking-wider mb-1">Average Rating</div>
+                  <div className="text-2xl font-bold text-amber-500 flex items-center gap-1">
                     <span>★</span>
                     <span>{data.averageRating > 0 ? data.averageRating.toFixed(2) : '0.00'}</span>
+                    <span className="text-xs font-normal text-slate-400">/ 5</span>
                   </div>
                 </div>
 
-                <div className="bg-white border border-slate-200/80 rounded-lg px-4 py-3 shadow-sm hover:border-slate-300 transition-colors">
-                  <div className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">Total Ratings</div>
-                  <div className="text-lg font-bold text-slate-900 mt-0.5">{data.ratings.length}</div>
+                <div className="bg-white border border-slate-200/80 rounded-xl p-5 shadow-sm hover:border-slate-300 transition-colors">
+                  <div className="text-xs text-slate-500 uppercase font-medium tracking-wider mb-1">Total Ratings</div>
+                  <div className="text-2xl font-bold text-slate-900">{data.ratings.length}</div>
                 </div>
               </section>
 
